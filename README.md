@@ -13,7 +13,16 @@ This solution depends on 3 files which will need to be modified by you to match 
 2. **rclone.conf** - please copy it to some folder in a user home directory. **~/.config** is a good candidate. Please modfify this file to match your setup. Specificaly the text between **[]**, **account** and **key** sections. 
 3. **rclone.sh** - please copy it to some folder in a user home directory. Please modify **R_CONFIG**, **STORAGE** and **MOUNT_PATH** variables to match your setup. 
 
-Once the files are in place you please run ***launchctl -w ~/Library/LaunchAgents/com.azure.blob.plist*** and it should run and mount the directory. 
+Once the files are in place you please run:
+
+`launchctl -w ~/Library/LaunchAgents/com.azure.blob.plist`
+
+you can issue a command: 
+
+`mount`
+
+It should confirm the mount status.
+
 If you need to troubleshoot the launchctl, you can use **Console** in **Now Mode** and search for **com.azure.blob** in **launchd.log**
 
 
