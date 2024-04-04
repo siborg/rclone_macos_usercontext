@@ -1,2 +1,4 @@
 # Use launchctl to mount remote storage with rclone on macos
-## In currently logged in uder context
+## In a currently logged in user context
+
+
