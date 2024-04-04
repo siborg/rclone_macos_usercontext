@@ -1,6 +1,12 @@
 # Use launchctl to mount remote azure storage with rclone on macos
 ## In a currently logged in user context
 
+You will need *[rclone](https://rclone.org)* and *[macfuse](https://osxfuse.github.io/)*. Whils macfuse can be installed via *[Homebrew](https://brew.sh)*, rclone must be installed directly. 
+
+You can do so by issuing the command: 
+
+`sudo -v ; curl https://rclone.org/install.sh | sudo bash`.
+
 This solution depends on 3 files which will need to be modified by you to match your setup: 
 
 1. **com.azure.blob.plist** - please copy this file to your **~/Library/LaunchAgents** folder. Feel free to rename file but if you do so please modify the **Label** tag inside to match the chosen filename(without the .plist at the end). The file must have a .plist extension. You will need to edit the **Label** and **Program** keys to match your filename and rclone.sh file location.
