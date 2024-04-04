@@ -1,5 +1,6 @@
 #!/bin/zsh
 R_CONFIG = 'path to rclone config file'
+# the storagew account name is the value between [] in the rclone.conf file. 
 STORAGE = 'storage_account_name:container_name'
 MOUNT_PATH = 'path to the storage mount point directory' 
 if test -d $MOUNT_PATH; then
