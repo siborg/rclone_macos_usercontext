@@ -15,14 +15,22 @@ This solution depends on 3 files which will need to be modified by you to match 
 
 Once the files are in place you please run:
 
-`launchctl -w ~/Library/LaunchAgents/com.azure.blob.plist`
+`launchctl load -w ~/Library/LaunchAgents/com.azure.blob.plist`
 
 you can issue a command: 
 
 `mount`
 
-It should confirm the mount status.
+It should confirm the mount status. If all is well you can start the service by issuing:
+
+`launchctl start -w ~/Library/LaunchAgents/com.azure.blob.plist`
+ 
 
 If you need to troubleshoot the launchctl, you can use **Console** in **Now Mode** and search for **com.azure.blob** in **launchd.log**
+To unload an agent property list from launchctl issue: 
 
+`launchctl stop -w ~/Library/LaunchAgents/com.azure.blob.plist`
+`launchctl unload -w ~/Library/LaunchAgents/com.azure.blob.plist`
+
+You can also use that command to unmount the directory if required. 
 
