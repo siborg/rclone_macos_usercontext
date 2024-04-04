@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+		"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+	<plist version="1.0">
+	<dict>
+		<key>EnvironmentVariables</key>
+		<dict>
+		<key>PATH</key>
+		<string>/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin</string>
+		</dict>
+		<key>Label</key>
+		<string>choose your own label here matching your plist filename e.g. com.azure.storage or com.google.drive etc</string>
+		<key>Program</key>
+    		<string>full path to the rclone.sh script</string>
+		<key>RunAtLoad</key>
+		<true/>
+		<key>StandardOutPath</key>
+		<string>/tmp/rclone_out.log</string>
+		<key>StandardErrorPath</key>
+		<string>/tmp/rclone_error.log</string>
+	</dict>
+	</plist>
